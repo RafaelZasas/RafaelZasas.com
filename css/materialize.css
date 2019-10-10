@@ -2705,6 +2705,13 @@ video.responsive-video {
     height: auto;
 }
 
+img.assignment3{
+    max-width: 100%;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
 .pagination li {
     display: inline-block;
     border-radius: 2px;

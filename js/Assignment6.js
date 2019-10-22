@@ -1,6 +1,5 @@
 function init1() {
     document.getElementById("tbl").style.visibility = "hidden";
-
 }
 
 

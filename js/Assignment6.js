@@ -1,4 +1,12 @@
+function init1() {
+    document.getElementById("tbl").style.visibility = "hidden";
+
+}
+
+
 function num1() {
+    document.getElementById("tbl").style.visibility = "visible";
+
     var distance = parseFloat(document.getElementById("txt1").value);
     var pace =  document.getElementById("txt2").value;
 

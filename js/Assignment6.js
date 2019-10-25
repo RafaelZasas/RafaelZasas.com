@@ -59,22 +59,39 @@ function mileTime(distance, speed) {
 
 function puzzle(){
     // fill the table with the images
-    document.getElementById("0").src = "<img src='/images/Assignment7/ass6p1.png' id='p1'>";
-    document.getElementById("1").innerHTML = "<img src='images/Assignment7/ass6p3.png' id='p3'>";
-    document.getElementById("2").innerHTML = "<img src='images/Assignment7/ass6p2.png' id='p2'>";
-
-    document.getElementById("3").innerHTML = "<img src='images/Assignment7/ass6p0.png' id='p0'>";
-    document.getElementById("4").innerHTML = "<img src='images/Assignment7/ass6p5.png' id='p5'>";
-    document.getElementById("5").innerHTML = "<img src='images/Assignment7/ass6p8.png' id='p8'>";
-
-    document.getElementById("6").innerHTML = "<img src='images/Assignment7/ass6p6.png' id='p6'>";
-    document.getElementById("7").innerHTML = "<img src='images/Assignment7/ass6p4.png' id='p4'>";
-    document.getElementById("8").innerHTML = "<img src='images/Assignment7/ass6p7.png' id='p7'>";
+    images=[
+        'images/Assignment7/ass6p0.png',
+        '/images/Assignment7/ass6p1.png',
+        'images/Assignment7/ass6p2.png',
+        'images/Assignment7/ass6p3.png',
+        'images/Assignment7/ass6p4.png',
+        'images/Assignment7/ass6p5.png',
+        'images/Assignment7/ass6p6.png',
+        'images/Assignment7/ass6p7.png'
+    ];
+    var r =8;
+    for (let i = 0; i < 9; i++) {
+        document.getElementById(`${i}`).innerHTML = `<img src='images/Assignment7/ass6p${r}.png' id='p${i}'>`;
+        r-=1;
+    }
+    // document.getElementById("0").src = "<img src= id='p1'>";
+    // document.getElementById("1").innerHTML = "<img src= id='p3'>";
+    // document.getElementById("2").innerHTML = "<img src= id='p2'>";
+    //
+    // document.getElementById("3").innerHTML = "<img src='images/Assignment7/ass6p0.png' id='p0'>";
+    // document.getElementById("4").innerHTML = "<img src='images/Assignment7/ass6p5.png' id='p5'>";
+    // document.getElementById("5").innerHTML = "<img src='images/Assignment7/ass6p8.png' id='p8'>";
+    //
+    // document.getElementById("6").innerHTML = "<img src='images/Assignment7/ass6p6.png' id='p6'>";
+    // document.getElementById("7").innerHTML = "<img src='images/Assignment7/ass6p4.png' id='p4'>";
+    // document.getElementById("8").innerHTML = "<img src='images/Assignment7/ass6p7.png' id='p7'>";
 }
 
 function moveTo(index){
-    // variables to hold the indicies of surrounding cells
-    var right = -1;  var left = -1; var above = -1; var below = -1;
+    var right = -1;
+    var left = -1;
+    var above = -1;
+    var below = -1;
     above = index - 3; below = index + 3;
 
     // if statements to find the indicies of surrounding cells. checks to see if

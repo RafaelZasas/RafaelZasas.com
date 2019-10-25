@@ -24,14 +24,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- script for navbar and dropdown -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.sidenav').sidenav();
         });
     </script>
 
 </head>
 
-<body onload="onLoad();">
+<body onload="puzzle();">
 <!-- begin navbar -->
 <nav>
     <div class="nav-wrapper">
@@ -47,7 +47,23 @@
     <li><a href="html/Assignment6.html">Back</a></li>
 </ul>
 
-<button class="btn-small" id="btn"></button>
+<table>
+    <tr>
+        <td id="0" onclick="moveTo(0)"></td>
+        <td id="1" onclick="moveTo(1)"></td>
+        <td id="2" onclick="moveTo(2)"></td>
+    </tr>
+    <tr>
+        <td id="3" onclick="moveTo(3)"></td>
+        <td id="4" onclick="moveTo(4)">></td>
+        <td id="5" onclick="moveTo(5)"></td>
+    </tr>
+    <tr>
+        <td id="6" onclick="moveTo(6)"></td>
+        <td id="7" onclick="moveTo(7)"></td>
+        <td id="8" onclick="moveTo(8)"></td>
+    </tr>
+</table>
 
 
 <!-- Compiled and minified JavaScript -->

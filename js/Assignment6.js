@@ -55,9 +55,66 @@ function mileTime(distance, speed) {
 
  /*      END OF RUNNER AID JS       */
 
-function onLoad() {
-    var markup = '<img src="/images/oranges.jpg" alt="b00"/>';
-    var button = document.getElementById("btn");
-    button.innerHTML= markup;
 
+
+function puzzle(){
+    // fill the table with the images
+    document.getElementById("0").innerHTML = "<img src='/images/Assignment7/ass6p1.png' id='p1'>";
+    document.getElementById("1").innerHTML = "<img src='images/Assignment7/ass6p3.png' id='p3'>";
+    document.getElementById("2").innerHTML = "<img src='images/Assignment7/ass6p2.png' id='p2'>";
+
+    document.getElementById("3").innerHTML = "<img src='images/Assignment7/ass6p0.png' id='p0'>";
+    document.getElementById("4").innerHTML = "<img src='images/Assignment7/ass6p5.png' id='p5'>";
+    document.getElementById("5").innerHTML = "<img src='images/Assignment7/ass6p8.png' id='p8'>";
+
+    document.getElementById("6").innerHTML = "<img src='images/Assignment7/ass6p6.png' id='p6'>";
+    document.getElementById("7").innerHTML = "<img src='images/Assignment7/ass6p4.png' id='p4'>";
+    document.getElementById("8").innerHTML = "<img src='images/Assignment7/ass6p7.png' id='p7'>";
+}
+
+function moveTo(index){
+    // variables to hold the indicies of surrounding cells
+    var right = -1;  var left = -1; var above = -1; var below = -1;
+    above = index - 3; below = index + 3;
+
+    // if statements to find the indicies of surrounding cells. checks to see if
+    // the clicked-on cell is a center cell, a left cell, or a right cell.
+    if(index == 1 || index == 4 || index == 7){
+        right = index + 1;
+        left = index - 1;
+    }
+    else if(index == 0 || index == 3 || index == 6){
+        right = index + 1;
+    }
+    else{
+        left = index - 1;
+    }
+
+    // array to hold the different indicies of table cells around the one clicked on
+    indicies = [];
+    indicies[0] = right; indicies[1] = left; indicies[2] = above; indicies[3] = below;
+    var innH = "";
+    var found = false;
+
+    // loop through the array to check the different indicies until the one with
+    // the blank image is found. if it's found, it gets sent to another method
+    // to switch the two images. if not found, nothing happens.
+    for(var i = 0; i < 4 && !found; i++){
+        var ind = indicies[i];
+        if(ind >= 0 && ind <= 8){
+            innH = document.getElementById(ind).innerHTML;
+            if(innH.charAt(22) == '8'){
+                changeImage(index, ind);
+                found = true;
+            }
+        }
+    }
+}
+
+function changeImage(index, blankIn){
+    // get the inner html of the two table cells and switch them
+    var innerIndex = document.getElementById(index).innerHTML;
+    var innerBlank = document.getElementById(blankIn).innerHTML;
+    document.getElementById(blankIn).innerHTML = innerIndex;
+    document.getElementById(index).innerHTML = innerBlank;
 }

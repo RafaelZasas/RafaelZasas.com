@@ -59,7 +59,7 @@ function mileTime(distance, speed) {
 
 function puzzle(){
     // fill the table with the images
-    document.getElementById("0").innerHTML = "<img src='/images/Assignment7/ass6p1.png' id='p1'>";
+    document.getElementById("0").src = "<img src='/images/Assignment7/ass6p1.png' id='p1'>";
     document.getElementById("1").innerHTML = "<img src='images/Assignment7/ass6p3.png' id='p3'>";
     document.getElementById("2").innerHTML = "<img src='images/Assignment7/ass6p2.png' id='p2'>";
 

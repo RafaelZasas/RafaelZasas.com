@@ -61,7 +61,7 @@ function init_puzzle(){
     // populate puzzle
     var arr = []; // for random puzzle each time
     while(arr.length < 9){
-        var r = Math.floor(Math.random()*8);
+        var r = Math.floor(Math.random()*9);
         if(arr.indexOf(r) === -1) arr.push(r); // if the number isn't already in the array
     }
     for (let i = 0; i < 9; i++) {

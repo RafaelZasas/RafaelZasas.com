@@ -59,12 +59,12 @@ var grey_id = 9;
 
 function init_puzzle(){
     // populate puzzle
-    var arr = [];
+    var arr = []; // for random puzzle each time
     while(arr.length < 9){
-        var r = Math.floor(Math.random()*9) + 1;
+        var r = Math.floor(Math.random()*8);
         if(arr.indexOf(r) === -1) arr.push(r); // if the number isn't already in the array
     }
-    for (let i = 1; i < 10; i++) {
+    for (let i = 0; i < 9; i++) {
         document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i]}.png`;
     }
 

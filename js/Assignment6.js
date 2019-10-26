@@ -67,7 +67,7 @@ function init_puzzle(){
     for (let i = 1; i <= 8; i++) {
         document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i-1]}.png`;
     }
-    document.getElementById(`9`).src = `/images/Assignment7/ass6p9.png`;
+    document.getElementById(`9`).src = `/images/Assignment7/ass6p8.png`;
 
 }
 

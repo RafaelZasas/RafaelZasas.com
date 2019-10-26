@@ -64,8 +64,8 @@ function init_puzzle(){
         var r = Math.floor(Math.random()*9);
         if(arr.indexOf(r) === -1) arr.push(r); // if the number isn't already in the array
     }
-    for (let i = 0; i < 9; i++) {
-        document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i]}.png`;
+    for (let i = 1; i <= 9; i++) {
+        document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i-1]}.png`;
     }
 
 }

@@ -60,13 +60,14 @@ var grey_id = 9;
 function init_puzzle(){
     // populate puzzle
     var arr = []; // for random puzzle each time
-    while(arr.length < 9){
-        var r = Math.floor(Math.random()*9);
+    while(arr.length < 8){
+        var r = Math.floor(Math.random()*8);
         if(arr.indexOf(r) === -1) arr.push(r); // if the number isn't already in the array
     }
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 8; i++) {
         document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i-1]}.png`;
     }
+    document.getElementById(`9`).src = `/images/Assignment7/ass6p9.png`;
 
 }
 

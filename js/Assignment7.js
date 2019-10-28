@@ -10,8 +10,9 @@ function init() {
 
 function reset() {
     document.getElementById("usersText").value = "";
+    document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";
-    document.getElementById("out").value="";
+    document.getElementById("out").innerText="";
 }
 
 function setBeginner() {

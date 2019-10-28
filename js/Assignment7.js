@@ -1,7 +1,6 @@
 let words = [];
 var startTime;
 var stopTime;
-var date = new Date();
 var sentence;
 
 function init() {
@@ -22,6 +21,7 @@ function setAdvanced() {
 }
 
 function start() {
+
     sentence="";
     // create the practice sentence
     for(let i = 0; i < 4; i++){
@@ -34,12 +34,13 @@ function start() {
     document.getElementById('out').innerHTML = '';
 
     // Start the timer
-
+    var date = new Date();
     startTime = date.getSeconds();
 }
 
 function stop() {
     document.getElementById("emoji").style.visibility = "visible";
+    var date = new Date();
     stopTime = date.getSeconds();
     var time = stopTime - startTime;
     let answer = document.getElementById("usersText").value;

@@ -2,7 +2,11 @@ let words = [];
 var startTime;
 var stopTime;
 var date = new Date();
-var practice="";
+var sentence="";
+
+function init() {
+    document.getElementById("emoji").style.visibility = "hidden";
+}
 
 function reset() {
     document.getElementById("usersText").value = "";
@@ -17,15 +21,14 @@ function setAdvanced() {
 }
 
 function start() {
-    let sentance = "";
     // TASK 1: BUILD THE STRING AND DISPLAY IT
     for(let i = 0; i < 4; i++){
-        sentance += words[Math.floor(Math.random() * 11)];
+        sentence += words[Math.floor(Math.random() * 11)];
         if(i < 3)
-            practice += " ";
+            sentence += " ";
     }
 
-    document.getElementById('GivenText').value = practice;
+    document.getElementById('GivenText').value = sentence;
     document.getElementById('out').innerHTML = '';
 
     // Start the timer
@@ -34,15 +37,16 @@ function start() {
 }
 
 function stop() {
+    document.getElementById("emoji").style.visibility = "visible";
     stopTime = date.getSeconds()-startTime;
     let answer = document.getElementById("usersText").value;
     let output;
-    if (answer == practice ){
+    if (answer == sentence ){
         output= "Good job. You typed the text correctly.\n" ;
         document.getElementById("emoji").src=`/images/happy_face.jpg`;
     } else{
         output = `Sorry, you have entered the text incorrectly.\n 
-            You typed: ${answer} \n You should have typed: ${practice} \n`;
+            You typed: ${answer} \n You should have typed: ${sentence} \n`;
         document.getElementById("emoji").src=`/images/sad_face.jpg`;
     }
 

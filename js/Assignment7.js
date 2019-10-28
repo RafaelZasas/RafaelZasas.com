@@ -10,14 +10,18 @@ function init() {
 
 function reset() {
     document.getElementById("usersText").value = "";
+    document.getElementById("emoji").style.visibility = "hidden";
+    document.getElementById("out").value="";
 }
 
 function setBeginner() {
     words = ["Pablo", "random", "officer", "police", "banana", "apples", "roast", "corndog", "tissues", "phone","computer","wallet","bottle"];
+    reset();
 }
 
 function setAdvanced() {
     words = ['perpetually', 'successful', 'exploitable', 'extravagant', 'unnecessary', 'Johannes', 'xylophone', 'Britannica', 'despicable', 'preposterous', 'pyromaniac'];
+    reset();
 }
 
 function start() {
@@ -55,7 +59,7 @@ function stop() {
     }
 
     output+= `Your total time was ${time} seconds.`;
-    document.getElementById("out").innerHTML=output;
+    document.getElementById("out").innerText=output;
 
 
 

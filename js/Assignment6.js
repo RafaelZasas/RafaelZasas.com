@@ -65,9 +65,9 @@ function init_puzzle(){
         if(arr.indexOf(r) === -1) arr.push(r); // if the number isn't already in the array
     }
     for (let i = 1; i <= 8; i++) {
-        document.getElementById(`${i}`).src = `/images/Assignment7/ass6p${arr[i-1]}.png`;
+        document.getElementById(`${i}`).src = `/images/puzzle/ass6p${arr[i-1]}.png`;
     }
-    document.getElementById(`9`).src = `/images/Assignment7/ass6p8.png`;
+    document.getElementById(`9`).src = `/images/puzzle/ass6p8.png`;
 
 }
 
@@ -78,7 +78,7 @@ function move(tileid){
         tileid == grey_id - 1 ||
         tileid == grey_id + 1) {
         document.getElementById(grey_id).src = tile.src; // set the blank to the chosen pic
-        tile.src = 'images/Assignment7/ass6p8.png'; // set the chosen pic to the blank
+        tile.src = 'images/puzzle/ass6p8.png'; // set the chosen pic to the blank
         grey_id = tileid;
     }
 }

@@ -3,55 +3,61 @@
 
 <head>
     <meta charset="utf-8">
-    <title>WebAppDev-Raff</title>
+    <title>Rafael Zasas</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="css/materialize.css">
 
-    <!-- Compiled and minified JavaScript -->
+    <!--Materialize -->
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="../css/raf.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+
+    <!-- My JS -->
+    <script type="text/javascript" src="../js/Assignment7.js"></script>
+
 
     <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- script for navbar and dropdown -->
+
+
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.sidenav').sidenav();
             $(".dropdown-trigger").dropdown();
         });
     </script>
-
 </head>
 
-<body>
+<body onload="init_run_aid()">
+
 <!-- begin navbar -->
 <nav>
     <div class="nav-wrapper">
         <a href="/" class="brand-logo">Home</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="html/schedule.html">Schedule</a></li>
+            <li><a href="html/puzzle.html">Puzzle Game</a></li>
+
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Assignments<i
-                    class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
     </div>
 </nav>
 <!-- side nav -->
 <ul class="sidenav" id="mobile-demo">
     <li><a href="html/schedule.html">Schedule</a></li>
+    <li><a href="html/">Puzzle Game</a></li>
     <li class="divider"></li>
     <li><a href="html/Assignment1.html"> Assignment 1 </a></li>
     <li><a href="html/Assignment2.html"> Assignment 2 </a></li>
     <li><a href="html/Assignment3.html"> Assignment 3 </a></li>
     <li><a href="html/Assignment4.html"> Assignment 4 </a></li>
     <li><a href="html/Assignment5.html"> Assignment 5 </a></li>
-    <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
     <li><a href="html/Assignment7.html"> Assignment 7 </a></li>
     <li><a href="html/Assignment8.html"> Assignment 8 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
@@ -67,7 +73,6 @@
     <li><a href="html/Assignment3.html"> Assignment 3 </a></li>
     <li><a href="html/Assignment4.html"> Assignment 4 </a></li>
     <li><a href="html/Assignment5.html"> Assignment 5 </a></li>
-    <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
     <li><a href="html/Assignment7.html"> Assignment 7 </a></li>
     <li><a href="html/Assignment8.html"> Assignment 8 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
@@ -77,59 +82,68 @@
 </ul>
 
 <!-- end navbar -->
-<div class="center-align" id="landing">
+<div data-role = "page" class="card-content">
+    <div data-role="content" class="container">
+        <h1 class="center">Texting Tutor</h1>
 
-    <br>
-    <div class="row">
-        <img class="circle col s8 m6 l4 offset-l4 offset-l3 offset-s2" src="/images/me.jpg" alt="me under a tree"/>
-    </div>
-    <div class="row">
-        <h1 class="white-text">Rafael Zasas</h1>
-        <h3 class="white-text">CS-222 Web Development</h3>
-        <h4 class="white-text">University of Redlands</h4>
+        <div class="row">
+            <div data-role="fieldcontain">
+                <form class="col s12 m6 l4">
+
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Specify Your Texting Level:</legend>
+                        <label for="rdoBeginner">
+                            <input type="radio" onclick="setBeginner()" name="radio-view" id="rdoBeginner" />
+                            <span>Beginner</span>
+                        </label>
+                        <label for="rdoAdvanced">
+                            <input type="radio" onclick="setAdvanced()" name="radio-view" id="rdoAdvanced"  checked />
+                            <span>Advanced</span>
+                        </label>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- BUTTON -->
+            <div class="col s12 m6 l4">
+                <button class="btn waves-effect" onclick="start();">
+                    Click this button to start a test.
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>The text you will type will appear here:</p>
+            <p id="GivenText"></p>
+        </div>
+
+
+        <div class="row">
+            <p>Enter your text here:</p>
+            <input type="text" id="usersText" value="Enter your answer here:" onclick="reset();">
+        </div>
+
+        <div class="row">
+            <!-- BUTTON -->
+            <div class="col s12 m6 l4">
+                <button class="btn waves-effect" onclick="convert();">
+                    Click this when you're done typing.
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="image" id="emoji">
+        </div>
+
+        <span id="out"></span>
+
+
     </div>
 </div>
 
-
-<!-- footer -->
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l4 s12">
-                <h5 class="white-text">My Business Ventures</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="2a03:b0c0:1:e0::529:9001">Fox Bot Crypto Trading</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col l4 s12">
-                <h5 class="white-text">Social Media</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/rafaelzasas/">Instagram</a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/rafael-zasas/">LinkedIn</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://github.com/RafaelZasas">GitHub</a></li>
-
-                </ul>
-            </div>
-
-            <div class="col l4 s12">
-                <h5 class="white-text">Sporting Life</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="https://www.collegeswimming.com/swimmer/746409/">College
-                        Swimming</a></li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2019 CS-222 Web App Development
-            <a class="grey-text text-lighten-4 right" href="http://facweb1.redlands.edu/facultyfolder/patriciacornez/">Trish
-                Cornez Website</a>
-        </div>
-    </div>
-</footer>
 
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

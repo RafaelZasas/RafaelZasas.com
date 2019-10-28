@@ -2,7 +2,7 @@ let words = [];
 var startTime;
 var stopTime;
 var date = new Date();
-var sentence="";
+var sentence;
 
 function init() {
     document.getElementById("emoji").style.visibility = "hidden";
@@ -22,9 +22,10 @@ function setAdvanced() {
 }
 
 function start() {
+    sentence="";
     // create the practice sentence
     for(let i = 0; i < 4; i++){
-        sentence += words[Math.floor(Math.random() * 11)];
+        sentence += words[Math.floor(Math.random() * 13)];
         if(i < 3)
             sentence += " ";
     }

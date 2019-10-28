@@ -2931,7 +2931,7 @@ ul.staggered-list li {
 .page-footer {
     padding-top: 20px;
     color: #fff;
-    background-color: #ee6e73;
+    background-color: #6eb7ee;
 }
 
 .page-footer .footer-copyright {
@@ -8791,6 +8791,11 @@ input[type=range]::-ms-thumb {
         text-align: center;
         margin-top: 1.2rem;
     }
+}
+
+#landing{
+    background-color: #ff3b61;
+
 }
 
 /*# sourceMappingURL=materialize.css.map */

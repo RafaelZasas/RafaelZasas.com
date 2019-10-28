@@ -40,7 +40,8 @@ function start() {
 
 function stop() {
     document.getElementById("emoji").style.visibility = "visible";
-    stopTime = date.getSeconds()-startTime;
+    stopTime = date.getSeconds();
+    var time = stopTime - startTime;
     let answer = document.getElementById("usersText").value;
     let output;
     if (answer == sentence ){
@@ -52,7 +53,7 @@ function stop() {
         document.getElementById("emoji").src=`/images/sad_face.jpg`;
     }
 
-    output+= `Your total time was ${stopTime} seconds.`;
+    output+= `Your total time was ${time} seconds.`;
     document.getElementById("out").innerHTML=output;
 
 

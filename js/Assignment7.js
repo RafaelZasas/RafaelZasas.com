@@ -8,30 +8,36 @@ function init() {
     setBeginner();
 }
 
-function reset() {
+function clear() {
     document.getElementById("usersText").value = "";
+}
+
+function reset() {
     document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";
-    document.getElementById("out").innerText="";
+    document.getElementById("out").innerText = "";
 }
 
 function setBeginner() {
-    words = ["Pablo", "random", "officer", "police", "banana", "apples", "roast", "corndog", "tissues", "phone","computer","wallet","bottle"];
     reset();
+    words = ["Pablo", "random", "officer", "police", "banana", "apples", "roast", "corndog", "tissues", "phone", "computer", "wallet", "bottle"];
+
 }
 
 function setAdvanced() {
-    words = ['perpetually', 'successful', 'exploitable', 'extravagant', 'unnecessary', 'Johannes', 'xylophone', 'Britannica', 'despicable', 'preposterous', 'pyromaniac'];
     reset();
+    words = ['perpetually', 'successful', 'exploitable', 'extravagant', 'unnecessary', 'Johannes', 'xylophone', 'Britannica', 'despicable', 'preposterous', 'pyromaniac'];
 }
 
 function start() {
-
-    sentence="";
+    reset();
+    document.getElementById("emoji").style.visibility = "hidden";
+    document.getElementById("out").innerText = "";
+    sentence = "";
     // create the practice sentence
-    for(let i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++) {
         sentence += words[Math.floor(Math.random() * 13)];
-        if(i < 3)
+        if (i < 3)
             sentence += " ";
     }
 
@@ -50,18 +56,17 @@ function stop() {
     var time = stopTime - startTime;
     let answer = document.getElementById("usersText").value;
     let output;
-    if (answer == sentence ){
-        output= "Good job. You typed the text correctly.\n" ;
-        document.getElementById("emoji").src=`/images/happy_face.jpg`;
-    } else{
+    if (answer == sentence) {
+        output = "Good job. You typed the text correctly.\n";
+        document.getElementById("emoji").src = `/images/happy_face.jpg`;
+    } else {
         output = `Sorry, you have entered the text incorrectly.\n 
             You typed: ${answer} \n You should have typed: ${sentence} \n`;
-        document.getElementById("emoji").src=`/images/sad_face.jpg`;
+        document.getElementById("emoji").src = `/images/sad_face.jpg`;
     }
 
-    output+= `Your total time was ${time} seconds.`;
-    document.getElementById("out").innerText=output;
-
+    output += `Your total time was ${time} seconds.`;
+    document.getElementById("out").innerText = output;
 
 
 }

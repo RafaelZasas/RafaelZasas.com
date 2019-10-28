@@ -6,6 +6,7 @@ var sentence="";
 
 function init() {
     document.getElementById("emoji").style.visibility = "hidden";
+    setBeginner();
 }
 
 function reset() {
@@ -21,7 +22,7 @@ function setAdvanced() {
 }
 
 function start() {
-    // TASK 1: BUILD THE STRING AND DISPLAY IT
+    // create the practice sentence
     for(let i = 0; i < 4; i++){
         sentence += words[Math.floor(Math.random() * 11)];
         if(i < 3)

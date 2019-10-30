@@ -10,11 +10,8 @@ function init() {
     setBeginner();
 }
 
-function clear() { // function to clear the " Enter your answer here: " from usersText
-    document.getElementById("usersText").value = "";
-}
 
-function reset() {
+function reset() { // clear all the old games text and img.
     document.getElementById("usersText").value = "";
     document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";

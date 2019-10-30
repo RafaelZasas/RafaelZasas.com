@@ -1,5 +1,7 @@
 let words = [];
 var sentence;
+let startTime;
+let stopTime;
 
 function init() {
     document.getElementById("emoji").style.visibility = "hidden";
@@ -7,10 +9,12 @@ function init() {
 }
 
 function clear() {
-    document.getElementById("usersText").innerText = "";
+    document.getElementById("usersText").value = "";
+    document.getElementById("GivenText").value = "";
 }
 
 function reset() {
+    document.getElementById("usersText").value = "";
     document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";
     document.getElementById("out").innerText = "";
@@ -28,8 +32,6 @@ function setAdvanced() {
 }
 
 function start() {
-    let startTime=0;
-    let stopTime=0;
     reset();
     document.getElementById("emoji").style.visibility = "hidden";
     document.getElementById("out").innerText = "";
@@ -45,15 +47,15 @@ function start() {
     document.getElementById('out').innerHTML = '';
 
     // Start the timer
-    var date = new Date();
+    let date = new Date();
     startTime = date.getSeconds();
 }
 
 function stop() {
     document.getElementById("emoji").style.visibility = "visible";
-    var date = new Date();
+    let date = new Date();
     stopTime = date.getSeconds();
-    var time = stopTime - startTime;
+    let time = stopTime - startTime;
     let answer = document.getElementById("usersText").value;
     let output;
     if (answer == sentence) {

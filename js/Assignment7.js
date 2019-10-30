@@ -1,6 +1,4 @@
 let words = [];
-var startTime;
-var stopTime;
 var sentence;
 
 function init() {
@@ -9,7 +7,7 @@ function init() {
 }
 
 function clear() {
-    document.getElementById("usersText").value = "";
+    document.getElementById("usersText").innerText = "";
 }
 
 function reset() {
@@ -30,6 +28,8 @@ function setAdvanced() {
 }
 
 function start() {
+    let startTime=0;
+    let stopTime=0;
     reset();
     document.getElementById("emoji").style.visibility = "hidden";
     document.getElementById("out").innerText = "";

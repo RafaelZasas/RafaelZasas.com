@@ -55,7 +55,7 @@ function start() {
 function stop() {
     document.getElementById("emoji").style.visibility = "visible"; // show the <input> tag
     stopTime = new Date(); // end the timer
-    time = (stopTime - startTime)/100; // duration of typing div by 1000 to get s and ms
+    time = Math.round((stopTime - startTime)/1000); // duration of typing div by 1000 to strip the ms & get seconds
     let answer = document.getElementById("usersText").value;
     let output;
     if (answer === sentence) {

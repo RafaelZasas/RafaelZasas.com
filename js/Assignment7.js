@@ -1,5 +1,5 @@
 let words = [];
-var sentence;
+let sentence;
 let startTime;
 let stopTime;
 
@@ -8,9 +8,8 @@ function init() {
     setBeginner();
 }
 
-function clear() {
+function clear() { // function to clear the " Enter your answer here: " from usersText
     document.getElementById("usersText").value = "";
-    document.getElementById("GivenText").value = "";
 }
 
 function reset() {
@@ -18,23 +17,20 @@ function reset() {
     document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";
     document.getElementById("out").innerText = "";
+    startTime=0;    stopTime=0;
 }
 
 function setBeginner() {
-    reset();
     words = ["Pablo", "random", "officer", "police", "banana", "apples", "roast", "corndog", "tissues", "phone", "computer", "wallet", "bottle"];
 
 }
 
 function setAdvanced() {
-    reset();
     words = ['perpetually', 'successful', 'exploitable', 'extravagant', 'unnecessary', 'Johannes', 'xylophone', 'Britannica', 'despicable', 'preposterous', 'pyromaniac'];
 }
 
 function start() {
-    reset();
-    document.getElementById("emoji").style.visibility = "hidden";
-    document.getElementById("out").innerText = "";
+    reset();  // clear all the previous text
     sentence = "";
     // create the practice sentence
     for (let i = 0; i < 4; i++) {
@@ -43,8 +39,7 @@ function start() {
             sentence += " ";
     }
 
-    document.getElementById('GivenText').value = sentence;
-    document.getElementById('out').innerHTML = '';
+    document.getElementById('GivenText').value = sentence; // populate the yellow <input> that user must repeat
 
     // Start the timer
     let date = new Date();
@@ -52,10 +47,10 @@ function start() {
 }
 
 function stop() {
-    document.getElementById("emoji").style.visibility = "visible";
+    document.getElementById("emoji").style.visibility = "visible"; // show the <input> tag
     let date = new Date();
     stopTime = date.getSeconds();
-    let time = stopTime - startTime;
+    let time = stopTime - startTime; // duration of typing
     let answer = document.getElementById("usersText").value;
     let output;
     if (answer == sentence) {
@@ -69,7 +64,6 @@ function stop() {
 
     output += `Your total time was ${time} seconds.`;
     document.getElementById("out").innerText = output;
-
-
+    
 }
 

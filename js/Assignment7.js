@@ -49,14 +49,13 @@ function start() {
     document.getElementById('GivenText').value = sentence; // populate the yellow <input> that user must repeat
 
     // Start the timer
-    let date = new Date();
-    startTime = date.getSeconds();
+    startTime = new Date();
 }
 
 function stop() {
     document.getElementById("emoji").style.visibility = "visible"; // show the <input> tag
-    stopTime = new Date();
-    time = (stopTime - startTime)/1000; // duration of typing div by 1000 to get s and ms
+    stopTime = new Date(); // end the timer
+    time = (stopTime - startTime)/100; // duration of typing div by 100 to get s and ms
     let answer = document.getElementById("usersText").value;
     let output;
     if (answer === sentence) {

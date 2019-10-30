@@ -2,6 +2,7 @@ let words = [];
 let sentence;
 let startTime;
 let stopTime;
+let time;
 let first_time;
 
 function init() {
@@ -16,7 +17,7 @@ function reset() { // clear all the old games text and img.
     document.getElementById("GivenText").value = "";
     document.getElementById("emoji").style.visibility = "hidden";
     document.getElementById("out").innerText = "";
-    startTime=0;    stopTime=0;
+    startTime=0;
 }
 
 function setBeginner() {
@@ -53,13 +54,14 @@ function start() {
 }
 
 function stop() {
+    let date;
     document.getElementById("emoji").style.visibility = "visible"; // show the <input> tag
-    let date = new Date();
+    date = new Date();
     stopTime = date.getSeconds();
-    let time = stopTime - startTime; // duration of typing
+    time = stopTime - startTime; // duration of typing
     let answer = document.getElementById("usersText").value;
     let output;
-    if (answer == sentence) {
+    if (answer === sentence) {
         output = "Good job. You typed the text correctly.\n";
         document.getElementById("emoji").src = `/images/happy_face.jpg`;
     } else {

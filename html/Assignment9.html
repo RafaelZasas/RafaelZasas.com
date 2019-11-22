@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Culinary Quiz</title>
+    <script src="/js/Assignment9.js"></script>
+</head>
+
+<body>
+<h1>Culinary Quiz</h1>
+<fieldset>
+    <legend>Select a category of culinary terms</legend>
+    <select id="part">
+        <option>food</option>
+        <option>beverage</option>
+        <option>condiment</option>
+    </select>
+</fieldset>
+
+<button onclick="fetchTerm();"> Build a Question </button>
+
+<div>
+    <h3 id="word"></h3>
+    <div id="choices"></div>
+    <br><br>
+    <div id="result"></div>
+</div>
+
+</body>
+</html>

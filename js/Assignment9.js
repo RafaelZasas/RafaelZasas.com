@@ -9,7 +9,8 @@ function fetchTerm() {
     var part = document.getElementById("part").value;  // select which culinary topic to quiz about
     var myXMLRequest = new XMLHttpRequest();
     myXMLRequest.onload = createPossibleAnswers;
-    myXMLRequest.open("GET", "word.php?part=" + part, true); // send which topic is being quizzed
+    myXMLRequest.open("GET", "Assignment9.php?part=" + part, true); // open the request to the php
+                                                                                    // and attach the quiz topic
     myXMLRequest.send();
 }
 

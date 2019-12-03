@@ -1,6 +1,6 @@
 <?php
   //TASK 1: Open and read the file into array
-  $line = file("culinaryQuizText.txt");
+  $line = file("/culinaryQuizText.txt");
 
   //TASK 2: Randomly select a term and definition
   list($term, $category, $definition) = preg_split("/[\t]/", trim($line[array_rand($line)])); // using regex to split the lines

@@ -5,7 +5,7 @@ function fetchTerm() {
     //console.log(selectedCategory);
     var myXMLRequest = new XMLHttpRequest();
     myXMLRequest.onload = createPossibleAnswers;
-    myXMLRequest.open("GET", "/php/Assignment9.php?q="+selectedCategory, true); // open the request to the php
+    myXMLRequest.open("GET", "Assignment9.php?q="+selectedCategory, true); // open the request to the php
                                                                                     // and attach the quiz topic
     myXMLRequest.send();
 }

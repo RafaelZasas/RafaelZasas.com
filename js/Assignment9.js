@@ -21,7 +21,12 @@ function createPossibleAnswers() {
     //TASK 2: GET THE MULTIPLE CHOICE ANSWERS
     document.getElementById("choices").innerHTML = ""; // clears the choices area
 
-    console.log(json.choices[0].definition);
+    // console.log(
+    //     json.choices[0].definition,
+    //     json.choices[1].definition,
+    //     json.choices[2].definition
+    //     );
+
     for (var i = 0; i < json.choices.length; i++) {
         var button = document.createElement("button");
         button.innerHTML = json.choices[i].definition;

@@ -1,0 +1,15 @@
+abalone	food	Shellfish of the univalve family, meaning they only have one shell.
+ahi	food	A term used in Hawaii to describe a yellow fin tuna.
+antipasto	food	This term  denotes a relatively light dish before a meal.
+hamburger	food	A patty of beef served on a bun and topped with condiments.
+quinoa	food	This grain was once the staple food of the Incas.
+absinthe	beverage	An anise-flavored liqueur.
+amaretto	beverage	An Italian almond flavored liqueur made from apricot pits.
+aperitif	beverage	A French term for an alcoholic beverage served before a meal as an appetizer.
+margarita	beverage	A drink made using fresh lime juice, orange liqueur and tequila.
+riesling	beverage	A classic German white wine.
+horseradish	condiment	Made from a plant that grows wild in European coastal areas.
+hollandaise	condiment	Made with butter and egg yolks and served hot with vegetables, fish, and eggs.
+ketchup	condiment	A thick sweet sauce made with tomatoes, vinegar, sugar, salt, and spices.
+margarine	condiment	A butter substitute.
+marmalade	condiment	A jellylike preserve that contains pieces of citrus fruit and rind.

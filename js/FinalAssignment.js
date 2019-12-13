@@ -35,7 +35,7 @@ function Login() {
 
     if (!isNaN(parseInt(password))){ // if the password is not only numbers
         //TASK 1: BUILD A QUERY STRING
-        var queryString = "lab11c.php?firstname=na&lastname=na" + lastName+"&email="+email+"&password="+password;
+        var queryString = "lab11c.php?firstname=na&lastname=na&email="+email+"&password="+password;
 
         //TASK 2: CREATE A HTTP REQUEST AND PROCESS IT
         var myXMLRequest = new XMLHttpRequest();

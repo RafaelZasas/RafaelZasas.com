@@ -29,7 +29,7 @@ $FirstName = $_REQUEST["password"];
 //        SELECT ALL RECORDS CONTAINING THE FIRST NAME FROM THE FORM.
 
 
-  $sql = "SELECT password FROM membership WHERE FirstName = '$FirstName' "; // single quotes is computed 
+  $sql = "SELECT password FROM membership WHERE FirstName = '$FirstName' "; // single quotes is computed
 
 
 

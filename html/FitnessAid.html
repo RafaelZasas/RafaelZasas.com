@@ -82,36 +82,23 @@
 
     <div class="center">
 
-
-        <form class="col s12 m8 l8" action="/js/FitnessAid.php" method="post">
-
+        <form class="col s12 m8 l8">
             <div class="row">
                 <div class="input-field inline">
-                    <input id="Email" type="email" class="validate"> <!--email-->
-                    <label for="Email">Email</label>
-                    <span class="helper-text" data-error="incorrect email" data-success=""></span>
+                    <input id="muscleGroup" type="text" class="validate"> <!--email-->
+                    <label for="muscleGroup">Muscle Group:</label>
                 </div>
             </div>
 
             <div class="row">
-                <div class="input-field inline">
-                    <input id="Password" type="password" class="validate"> <!-- password -->
-                    <label for="Password">Password</label>
-                </div>
+                <button type="submit" onclick="Submit()" class="btn">Submit</button> <!-- register button-->
             </div>
-
-            <div class="row">
-                <button type="submit"  class="btn">Login</button> <!-- register button-->
-            </div>
-
-            <div class="row"> <span class="blue-grey-text">
-                Dont have an account? <a href="/html/FitnessAidRegister.html">
-               <b>Register Here</b></a> </span>
-                </span></div>
 
         </form>
 
     </div>
+
+    <div id="txtA"></div> <!-- for output-->
 
 </div>
 

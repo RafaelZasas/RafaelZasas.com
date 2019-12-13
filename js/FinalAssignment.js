@@ -21,9 +21,10 @@ function Login() {
     var email = document.getElementById("Email").value;
     var password = document.getElementById("Password").value;
 
-    if (password.isNumeric()){
-        alert("works");
+    if (isNaN(parseInt(password))){ // if the password is not only numbers
+
+        alert("Enter numbers only");
         console.log("password check works");
-    } else alert("Enter numbers only");
+    } else  alert("works");
 
 }

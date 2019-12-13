@@ -1,10 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <title>Register for Fitness Aide</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Materialize -->
+    <link rel="stylesheet" href="/css/materialize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+
+    <!-- My JS -->
+    <script type="text/javascript" src="/js/FinalAssignment.js"></script>
+
+
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $(".dropdown-trigger").dropdown();
+        });
+    </script>
 </head>
+
 <body>
-$END$
+
+<!-- begin navbar -->
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Home</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Assignments<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+</nav>
+<!-- side nav -->
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="html/schedule.html">Schedule</a></li>
+    <li class="divider"></li>
+    <li><a href="html/Assignment1.html"> Assignment 1 </a></li>
+    <li><a href="html/Assignment2.html"> Assignment 2 </a></li>
+    <li><a href="html/Assignment3.html"> Assignment 3 </a></li>
+    <li><a href="html/Assignment4.html"> Assignment 4 </a></li>
+    <li><a href="html/Assignment5.html"> Assignment 5 </a></li>
+    <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
+    <li><a href="html/Assignment9.html"> Assignment 8 </a></li>
+    <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
+</ul>
+
+<!-- Dropdown  -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="html/Assignment1.html"> Assignment 1 </a></li>
+    <li><a href="html/Assignment2.html"> Assignment 2 </a></li>
+    <li><a href="html/Assignment3.html"> Assignment 3 </a></li>
+    <li><a href="html/Assignment4.html"> Assignment 4 </a></li>
+    <li><a href="html/Assignment5.html"> Assignment 5 </a></li>
+    <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
+    <li><a href="html/Assignment9.html"> Assignment 8 </a></li>
+    <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
+</ul>
+
+<!-- end navbar -->
+<div class="center-align">
+    <h1>Register for Fitness Aide</h1>
+</div>
+
+<div class="grid">
+
+    <div class="center">
+
+
+        <form class="col s12 m8 l8">
+
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="FirstName" type="text" class="validate">
+                    <label for="FirstName">First Name:</label> <!-- First Name -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="LastName" type="text" class="validate">
+                    <label for="LastName">Last Name:</label> <!-- Last Name -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="email" type="email" class="validate"> <!--email-->
+                    <label for="email">Email Address:</label>
+                    <span class="helper-text" data-error="incorrect email" data-success=""></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="password" type="password" class="validate"> <!--password-->
+                    <label for="password">Password (numeric only):</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <button onclick="Register()" class="btn">Register</button> <!--register button-->
+            </div>
+
+            <div class="row"> <span class="blue-grey-text">
+                Already have an account? <a href="/html/FiitnessAidLogin.html">
+               <b>Login Here</b></a> </span>
+                </span></div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
+
 </html>

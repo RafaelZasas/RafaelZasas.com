@@ -6,10 +6,12 @@ function Register() {
     var email = document.getElementById("Email").value;
     var password = document.getElementById("Password").value;
 
-    if (password.isNumeric()){
+    if (isNaN(parseInt(password))){
         alert("works");
         console.log("password check works");
-    } else alert("Enter numbers only");
+    } else {
+        alert("Enter numbers only");
+    }
 
 
 
@@ -25,6 +27,9 @@ function Login() {
 
         alert("Enter numbers only");
         console.log("password check works");
-    } else  alert("works");
+
+    } else  {
+        alert("works");
+    }
 
 }

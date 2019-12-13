@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Rafael Zasas</title>
+    <title>Rafael Zasas - Fitness Aide Login</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Materialize -->
-    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="../css/materialize.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
     <!-- JQuery -->
@@ -16,7 +16,7 @@
 
 
     <!-- My JS -->
-    <script type="text/javascript" src="/js/Assignment7.js"></script>
+    <script type="text/javascript" src="../js/FinalAssignment.js"></script>
 
 
     <base href="/">
@@ -25,14 +25,14 @@
 
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.sidenav').sidenav();
             $(".dropdown-trigger").dropdown();
         });
     </script>
 </head>
 
-<body onload="init();">
+<body>
 
 <!-- begin navbar -->
 <nav>
@@ -42,7 +42,8 @@
         <ul class="right hide-on-med-and-down">
 
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Assignments<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Assignments<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
     </div>
 </nav>
@@ -58,7 +59,6 @@
     <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 8 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
-    <li><a href="html/FiitnessAidLogin.html"> Fitness Aide </a></li>
 </ul>
 
 <!-- Dropdown  -->
@@ -71,69 +71,50 @@
     <li><a href="html/Assignment6.html"> Assignment 6 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 8 </a></li>
     <li><a href="html/Assignment9.html"> Assignment 9 </a></li>
-    <li><a href="html/FiitnessAidLogin.html"> Fitness Aide </a></li>
 </ul>
 
 <!-- end navbar -->
-<div data-role = "page" class="card-content">
-    <div data-role="content" class="container">
-        <h1 class="center">Texting Tutor</h1>
+<div class="center-align">
+    <h1>Login to Fitness Aide</h1>
+</div>
 
-        <div class="row">
-            <div data-role="fieldcontain">
-                <form class="col s12 m6 l4">
+<div class="grid">
 
-                    <fieldset data-role="controlgroup" data-type="horizontal">
-                        <legend>Specify Your Texting Level:</legend>
-                        <label for="rdoBeginner">
-                            <input type="radio" onclick="setBeginner()" name="radio-view" id="rdoBeginner" checked/>
-                            <span>Beginner</span>
-                        </label>
-                        <label for="rdoAdvanced">
-                            <input type="radio" onclick="setAdvanced()" name="radio-view" id="rdoAdvanced" />
-                            <span>Advanced</span>
-                        </label>
-                    </fieldset>
-                </form>
+    <div class="center">
+
+
+        <form class="col s12 m8 l8">
+
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="email" type="email" class="validate"> <!--email-->
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="incorrect email" data-success=""></span>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <!-- BUTTON -->
-            <div class="col s12 m6 l4">
-                <button class="btn waves-effect" onclick="start();">
-                    Click this button to start a test.
-                </button>
+            <div class="row">
+                <div class="input-field inline">
+                    <input id="password" type="password" class="validate"> <!-- password -->
+                    <label for="password">Password</label>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <p>The text you will type will appear here:</p>
-            <label for="GivenText"></label><input id="GivenText" type="text" disabled>
-        </div>
-
-
-        <div class="row">
-            <label for="usersText"></label><input type="text" id="usersText" value="Enter your answer here:">
-        </div>
-
-        <div class="row">
-            <!-- BUTTON -->
-            <div class="col s12 m6 l4">
-                <button class="btn waves-effect" onclick="stop();">
-                    Click this when you're done typing.
-                </button>
+            <div class="row">
+                <button onclick="register()" class="btn">Login</button> <!-- register button-->
             </div>
-        </div>
 
-        <div class="row">
-            <input type="image" id="emoji">
-        </div>
+            <div class="row"> <span class="blue-grey-text">
+                Dont have an account? <a href="../html/FitnessAidRegister">
+               <b>Register Here</b></a> </span>
+                </span></div>
 
-        <span id="out"></span>
-
+        </form>
 
     </div>
+
+</div>
+
 </div>
 
 

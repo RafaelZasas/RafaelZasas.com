@@ -7,22 +7,31 @@
 //        Argument 5: Port for MySQL, which is not hosted locally.
 //NOTE: $mysqli = new mysqli("127.0.0.1", "username", "password", "database", 3306);
 
-$mysqli = new mysqli("localhost", "class_database", "1234", "class_database");
+$mysqli = new mysqli(
+"private-fitnessaid-do-user-6519810-0.db.ondigitalocean.com", //host name
+ "doadmin",  // username
+  "sufkmm8xx69dtx6l ",  //psssword
+   "fitnessaid",  // database name
+   "25060" //port
+   );
+
 if ($mysqli->connect_errno) {
   echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
 //TASK 2: GET FIRST NAME FROM THE FORM
-$myName = $_POST["myName"];
+$FirstName = $_REQUEST["firstname"];
+$FirstName = $_REQUEST["lastname"];
+$FirstName = $_REQUEST["email"];
+$FirstName = $_REQUEST["password"];
 
-//TASK 3: BUILD A STRING CONTAININ A MYSQL INSTRUCTION TO
+//TASK 3: BUILD A STRING CONTAINING A MYSQL INSTRUCTION TO
 //        SELECT ALL RECORDS CONTAINING THE FIRST NAME FROM THE FORM.
-if ($myName != null){
-  $sql = "SELECT FirstName, LastName, Email FROM ContactsTable WHERE FirstName = '$myName'";
-}
-else {
-    $sql = "SELECT FirstName, LastName, Email FROM ContactsTable";
-}
+
+
+  $sql = "SELECT password FROM membership WHERE FirstName = '$FirstName' "; // single quotes is computed 
+
+
 
 //TASK 4: USE THE ESTABLISHED DATABASE CONNECTION TO PROCESS THE DATABASE QUERY.
 //        STORE THE RESULTS IN A VARIABLE.
